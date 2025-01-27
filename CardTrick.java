@@ -61,12 +61,13 @@ public class CardTrick {
         }
 
         
+        // Add the hardcoded lucky card (2 of Clubs)
         Card luckyCard = new Card();
-        luckyCard.setValue(2);
-        luckyCard.setSuit("Clubs");
+        luckyCard.setValue(2); // Hardcoded value
+        luckyCard.setSuit("Clubs"); // Hardcoded suit
         System.out.println("\nLucky card: " + luckyCard.getValue() + " of " + luckyCard.getSuit());
-
         
+        // Check if the lucky card is in the magic hand
         boolean luckyFound = false;
         for (Card card : magicHand) {
             if (card.getValue() == luckyCard.getValue() &&
@@ -75,12 +76,13 @@ public class CardTrick {
                 break;
             }
         }
-
         
+        // Report the result for the lucky card
         if (luckyFound) {
             System.out.println("The lucky card is in the magic hand! You win!");
         } else {
             System.out.println("The lucky card is not in the magic hand.");
         }
+
     }
 }
